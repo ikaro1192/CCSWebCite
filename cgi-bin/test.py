@@ -21,7 +21,12 @@ def getTopics():
 	cur=con.cursor()
 
 	#Select Topics Data
-	cur.execute(""" select title, date, body from Topics where id = %d;"""%TopicID)
+	cur.execute("""select count(id) from Topics;""")
+	result = cur.fetchall()		
+	TopicsNum = result[0][0]
+
+
+	cur.execute(""" select title, date, body from Topics where id = %d;"""%(TopicsNum - TopicID + 1))
 	result = cur.fetchall()		
 	if (result != []):
 		for res in result:
