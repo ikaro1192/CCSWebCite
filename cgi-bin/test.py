@@ -26,7 +26,7 @@ def getTopics():
 	TopicsNum = result[0][0]
 
 
-	cur.execute(""" select title, date, body from Topics where id = %d;"""%(TopicsNum - TopicID + 1))
+	cur.execute(""" select title, date, body from Topics where id = ?;""", (TopicsNum - TopicID + 1,))
 	result = cur.fetchall()		
 	if (result != []):
 		for res in result:

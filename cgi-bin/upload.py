@@ -20,8 +20,8 @@ def addTopics(Title,Body,Date = datetime.datetime.today().strftime("%Y-%m-%d")):
 	except:
 		pass
 
-	cur.execute(u"""insert into Topics ( title, date, body)
-						values  ('%s','%s', '%s');"""% (Title,Date,Body))
+	cur.execute(u"""insert into Topics (title, date, body)
+						values  (?, ?, ?);""", (Title,Date,Body))
 	con.commit()
 	print "finish!"
 
