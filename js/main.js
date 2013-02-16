@@ -17,7 +17,7 @@ function callback(obj){
 function changeText(){
 	$("#next").html('<img src="image/Loading.gif">');
            setTimeout(function() {
-				$.getJSON("http://127.0.0.1:8000/cgi-bin/test.py?callback=?",{id:counter},function(obj){});
+				$.getJSON("cgi-bin/test.py?callback=?",{id:counter},function(obj){});
           }, 100);
 
 }
