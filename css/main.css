@@ -1,0 +1,44 @@
+
+body {
+  background:
+    #f7f7ff
+    url(../image/background.jpg)
+    right bottom
+    no-repeat
+    fixed;
+  
+  margin: 8px;
+  font-size: 12px;
+}
+
+h2 {
+  width: 560px;
+  height: 22px;
+  line-height: 22px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 24px;
+  font-size: 16px;
+  background-image: url(../image/bar.png);
+  background-repeat: no-repeat;
+}
+
+div#IntroduceCCS_Box{
+position: absolute;
+top: 80px;
+left: 160px;
+width: 150px;
+font-size:16pt;
+color:#FFFFFF;
+/*text-shadow: 1px 1px 0px #AAAAAA, 3px 3px 2px #666666;*/
+}
+
+div#IntroduceCCS_Content{
+position: absolute;
+top: 80px;
+left: 170px;
+width: 130px;
+font-size:16pt;
+color:#000000;
+/*text-shadow: 1px 1px 0px #AAAAAA, 3px 3px 2px #666666;*/
+}
