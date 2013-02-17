@@ -35,8 +35,8 @@ print "Content-type: text/html;charset=utf-8\n"
 req = Request()
 #パスは各自設定してください
 if req.getreq("pass") == "pass":
-	title = req.getreq("title")
-	body = req.getreq("body")
+	title = unicode(req.getreq("title"),'utf-8')
+	body = unicode(req.getreq("body"),'utf-8')
 	addTopics(title,body)
 else:
 	print "wrong password"
